@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:c="http://www.springframework.org/schema/c"
+    
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean class="com.ninfinity.contructorinjection.Student" name="std1">
+    	<constructor-arg>
+    		<value>7</value>
+    	</constructor-arg>
+    	<constructor-arg>
+    		<value>Arjun</value>
+    	</constructor-arg>
+    </bean>
+    
+    <bean class="com.ninfinity.contructorinjection.Student" name="std2">
+    	<constructor-arg value="8"/>
+    	<constructor-arg value="Rahul"/>
+    </bean>
+    
+    <bean class="com.ninfinity.contructorinjection.Student" name="std3" c:rollNumber="9" c:studentName="Omkar"/>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <bean class="com.ninfinity.contructorinjection.Address" name="addRef">
+    	<constructor-arg value="Mumbai"/>
+    </bean>	
+    
+    <bean class="com.ninfinity.contructorinjection.Employee" name="emp1">
+    	<constructor-arg value="Krishna"/>
+    	
+    	<constructor-arg>
+    		<list>
+    			<value>Rahul</value>
+    			<value>Virat</value>
+    		</list>
+    	</constructor-arg>
+    	
+    	<constructor-arg>
+    		<ref bean="addRef"/>
+    	</constructor-arg>
+    </bean>
+    
+  
+
+		
+</beans>

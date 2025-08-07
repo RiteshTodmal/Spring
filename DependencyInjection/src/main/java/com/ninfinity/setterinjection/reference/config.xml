@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- bean definitions here -->
+		<bean class="com.ninfinity.setterinjection.reference.Address" name="addRef">
+			<property name="city" value="Pune"/>
+		</bean>
+		
+		<bean class="com.ninfinity.setterinjection.reference.Teacher" name="teacher1">
+			<property name="teacherName" value="Pramod"/>
+			<property name="add">
+				<ref bean="addRef"/>
+			</property>
+		</bean>
+		
+		<bean class="com.ninfinity.setterinjection.reference.Teacher" name="teacher2">
+			<property name="teacherName" value="Rahul"/>
+			<property name="add" ref="addRef"/>			
+		</bean>
+		
+		<bean class="com.ninfinity.setterinjection.reference.Teacher" name="teacher3" p:teacherName = "Rohit" p:add-ref="addRef"/>
+			
+		
+		
+</beans>

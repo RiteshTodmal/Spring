@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=SpringJDBC/C:\/Users\/HP\/.m2\/repository\/org\/springframework\/spring-jdbc\/6.2.4\/spring-jdbc-6.2.4.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/6.2.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.jdbc.core(JdbcTemplate.class[JdbcTemplate" modifiers="33" timestamp="1750255561390"/>
+    <typeInfo handle="=SpringJDBC/C:\/Users\/HP\/.m2\/repository\/org\/springframework\/spring-jdbc\/6.2.4\/spring-jdbc-6.2.4.jar=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-jdbc=/=/maven.version=/6.2.4=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.springframework.jdbc.datasource(DriverManagerDataSource.class[DriverManagerDataSource" modifiers="33" timestamp="1750255561390"/>
+    <typeInfo handle="=SpringORMProject/C:\/Users\/HP\/.m2\/repository\/org\/hibernate\/hibernate-core\/5.6.4.Final\/hibernate-core-5.6.4.Final.jar=/maven.pomderived=/true=/=/maven.groupId=/org.hibernate=/=/maven.artifactId=/hibernate-core=/=/maven.version=/5.6.4.Final=/=/maven.scope=/compile=/=/maven.pomderived=/true=/&lt;org.hibernate.dialect(MySQL8Dialect.class[MySQL8Dialect" modifiers="33" timestamp="1744204131203"/>
+</typeInfoHistroy>

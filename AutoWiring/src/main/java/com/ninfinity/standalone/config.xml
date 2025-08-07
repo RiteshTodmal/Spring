@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	
+	<beans xmlns="http://www.springframework.org/schema/beans"
+	    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	    xmlns:context="http://www.springframework.org/schema/context"
+	    xmlns:p="http://www.springframework.org/schema/p"
+	    xmlns:c="http://www.springframework.org/schema/c"
+	     xmlns:util="http://www.springframework.org/schema/util"
+	    
+	    xsi:schemaLocation="
+	        http://www.springframework.org/schema/beans 
+	        http://www.springframework.org/schema/beans/spring-beans.xsd
+	        http://www.springframework.org/schema/context 
+	        http://www.springframework.org/schema/context/spring-context.xsd
+	        http://www.springframework.org/schema/util 
+	        http://www.springframework.org/schema/util/spring-util.xsd">
+	
+	    <!-- bean definitions here -->
+	    
+	    <context:annotation-config/>
+	    <context:component-scan base-package="com.ninfinity.standalone"/>
+	    
+	    <util:list list-class="java.util.ArrayList" id="myfriends">
+	    <value>Pramod</value>
+	    <value>Arjun</value>
+	    </util:list>
+	    
+	    <util:map map-class="java.util.TreeMap" id="mymarks">
+	    <entry key="Project" value="190"/>
+	    <entry key="NLP" value="28"/>
+	    </util:map>
+	    
+	    <util:properties id="dbconfig">
+	    <prop key="driver">com.mysql.cj.jdbc.Driver</prop>
+	    <prop key="url">jdbc:mysql://localhost:3306/dbname</prop>
+	    <prop key="user">root</prop>
+	    <prop key="password">root</prop>
+	    </util:properties>
+	    
+	    
+	    
+	    <bean class="com.ninfinity.standalone.Person" name="per1">
+	    <property name="friends" ref="myfriends"/>
+	    <property name="marks" ref="mymarks"/>
+	    <property name="dbc" ref="dbconfig"/>
+	    
+	    </bean>
+	    
+	    <bean class="com.ninfinity.standalone.Teacher" name="ter1">
+	    <property name="frndList" ref="myfriends"/>  
+	    </bean>
+	   
+	   
+	
+			
+	</beans>
